@@ -1,9 +1,11 @@
 package pl.k1it.spring5recipe2app.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class UnitOfMeasure {
 
     @Id
