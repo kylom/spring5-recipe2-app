@@ -1,10 +1,12 @@
 package pl.k1it.spring5recipe2app.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.k1it.spring5recipe2app.sevices.RecipeService;
 
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -37,6 +39,7 @@ public class IndexController {
 
     @RequestMapping({"", "/", "/index"})
     public String getIndexPage(Model model) {
+        log.debug("Getting Index page");
 
         model.addAttribute("recipes", recipeService.getRecipes());
         return "index";
